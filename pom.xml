@@ -13,8 +13,6 @@
         <maven-assembly-plugin>3.3.0</maven-assembly-plugin>
         <maven-compiler-plugin>3.8.1</maven-compiler-plugin>
         <slf4j.version>1.7.30</slf4j.version>
-        <junit.version>4.13.1</junit.version>
-        <assertj.version>3.15.0</assertj.version>
     </properties>
 
     <dependencies>
@@ -22,7 +20,7 @@
         <dependency>
             <groupId>com.sparkjava</groupId>
             <artifactId>spark-core</artifactId>
-            <version>2.5</version>
+            <version>2.9.3</version>
         </dependency>
 
         <dependency>
@@ -37,18 +35,6 @@
             <version>${slf4j.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>${assertj.version}</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
     <build>
     <finalName>java-spark-run</finalName>
@@ -64,6 +50,7 @@
             </plugin>
 
             <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>${maven-assembly-plugin}</version>
                 <configuration>
